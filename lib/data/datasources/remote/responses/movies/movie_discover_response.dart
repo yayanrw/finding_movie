@@ -1,4 +1,4 @@
-import 'package:finding_movie/data/datasources/remote/dtos/movie_discover_dto.dart';
+import 'package:finding_movie/data/datasources/remote/dtos/movies/movie_discover_dto.dart';
 import 'package:json_annotation/json_annotation.dart';
 
 part 'movie_discover_response.g.dart';

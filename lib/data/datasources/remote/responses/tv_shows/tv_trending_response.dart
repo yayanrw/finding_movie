@@ -1,4 +1,4 @@
-import 'package:finding_movie/data/datasources/remote/dtos/tv_trending_dto.dart';
+import 'package:finding_movie/data/datasources/remote/dtos/tv_shows/tv_trending_dto.dart';
 import 'package:json_annotation/json_annotation.dart';
 
 part 'tv_trending_response.g.dart';

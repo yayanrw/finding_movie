@@ -1,4 +1,5 @@
-import '../dtos/movie_trending_dto.dart';
+import 'package:finding_movie/data/datasources/remote/dtos/movies/movie_trending_dto.dart';
+
 import 'package:json_annotation/json_annotation.dart';
 
 part 'movie_trending_response.g.dart';
@@ -11,7 +12,7 @@ class MovieTrendingResponse {
     required this.totalPages,
     required this.totalResults,
   });
-  
+
   int page;
   List<MovieTrendingDto> results;
   int totalPages;
