@@ -4,6 +4,7 @@ part 'tv_discover_dto.g.dart';
 
 @JsonSerializable()
 class TvDiscoverDto {
+  bool? adult;
   String backdropPath;
   DateTime firstAirDate;
   List<int> genreIds;
@@ -19,6 +20,7 @@ class TvDiscoverDto {
   int voteCount;
 
   TvDiscoverDto({
+    this.adult,
     required this.backdropPath,
     required this.firstAirDate,
     required this.genreIds,

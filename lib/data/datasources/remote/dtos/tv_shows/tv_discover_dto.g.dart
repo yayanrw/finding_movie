@@ -8,6 +8,7 @@ part of 'tv_discover_dto.dart';
 
 TvDiscoverDto _$TvDiscoverDtoFromJson(Map<String, dynamic> json) =>
     TvDiscoverDto(
+      adult: json['adult'] as bool?,
       backdropPath: json['backdropPath'] as String,
       firstAirDate: DateTime.parse(json['firstAirDate'] as String),
       genreIds:
@@ -28,6 +29,7 @@ TvDiscoverDto _$TvDiscoverDtoFromJson(Map<String, dynamic> json) =>
 
 Map<String, dynamic> _$TvDiscoverDtoToJson(TvDiscoverDto instance) =>
     <String, dynamic>{
+      'adult': instance.adult,
       'backdropPath': instance.backdropPath,
       'firstAirDate': instance.firstAirDate.toIso8601String(),
       'genreIds': instance.genreIds,
