@@ -1,4 +1,5 @@
 import 'package:equatable/equatable.dart';
+import 'package:finding_movie/data/datasources/remote/dtos/tv_shows/tv_trending_dto.dart';
 
 class TvTrending extends Equatable {
   final String backdropPath;
@@ -26,4 +27,17 @@ class TvTrending extends Equatable {
         firstAirDate,
         voteAverage,
       ];
+}
+
+extension TvTrendingDtoExtension on TvTrendingDto {
+  TvTrending toEntity() {
+    return TvTrending(
+      backdropPath: backdropPath,
+      id: id,
+      name: name,
+      posterPath: posterPath,
+      firstAirDate: firstAirDate,
+      voteAverage: voteAverage,
+    );
+  }
 }
