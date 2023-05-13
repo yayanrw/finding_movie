@@ -10,8 +10,10 @@ MovieDetailResponse _$MovieDetailResponseFromJson(Map<String, dynamic> json) =>
     MovieDetailResponse(
       adult: json['adult'] as bool,
       backdropPath: json['backdropPath'] as String,
-      belongsToCollection: BelongsToCollectionDto.fromJson(
-          json['belongsToCollection'] as Map<String, dynamic>),
+      belongsToCollection: json['belongsToCollection'] == null
+          ? null
+          : BelongsToCollectionDto.fromJson(
+              json['belongsToCollection'] as Map<String, dynamic>),
       budget: json['budget'] as int,
       genres: (json['genres'] as List<dynamic>)
           .map((e) => GenreDto.fromJson(e as Map<String, dynamic>))
