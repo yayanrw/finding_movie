@@ -10,7 +10,9 @@ import 'package:finding_movie/data/datasources/remote/responses/tv_shows/tv_deta
 import 'package:finding_movie/data/datasources/remote/responses/tv_shows/tv_discover_response.dart';
 import 'package:finding_movie/data/datasources/remote/responses/tv_shows/tv_trending_response.dart';
 import 'package:http/http.dart' as http;
+import 'package:injectable/injectable.dart';
 
+@LazySingleton(as: RemoteDataSource)
 class RemoteDataSourceImpl implements RemoteDataSource {
   RemoteDataSourceImpl(this.client);
 
