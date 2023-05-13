@@ -1,4 +1,5 @@
 import 'package:equatable/equatable.dart';
+import 'package:finding_movie/data/datasources/remote/responses/movies/movie_detail_response.dart';
 import 'package:finding_movie/domain/entities/movies/genre.dart';
 
 class MovieDetail extends Equatable {
@@ -36,4 +37,20 @@ class MovieDetail extends Equatable {
         title,
         voteAverage,
       ];
+}
+
+extension MovieDetailResponseExtension on MovieDetailResponse {
+  MovieDetail toEntity() {
+    return MovieDetail(
+      backdropPath: backdropPath,
+      genres: genres.map((genreDto) => genreDto.toEntity()).toList(),
+      id: id,
+      overview: overview,
+      posterPath: posterPath,
+      releaseDate: releaseDate,
+      runtime: runtime,
+      title: title,
+      voteAverage: voteAverage,
+    );
+  }
 }
