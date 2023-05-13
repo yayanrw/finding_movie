@@ -12,7 +12,7 @@ part 'movie_detail_response.g.dart';
 class MovieDetailResponse {
   bool adult;
   String backdropPath;
-  BelongsToCollectionDto belongsToCollection;
+  BelongsToCollectionDto? belongsToCollection;
   int budget;
   List<GenreDto> genres;
   String homepage;
@@ -39,7 +39,7 @@ class MovieDetailResponse {
   MovieDetailResponse({
     required this.adult,
     required this.backdropPath,
-    required this.belongsToCollection,
+    this.belongsToCollection,
     required this.budget,
     required this.genres,
     required this.homepage,
