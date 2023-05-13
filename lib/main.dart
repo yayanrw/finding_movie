@@ -25,22 +25,19 @@ class MyApp extends StatelessWidget {
 
     S.load(deviceLocale);
 
-    return MultiProvider(
-      providers: [],
-      child: MaterialApp.router(
-        useInheritedMediaQuery: true,
-        title: appTitle,
-        debugShowCheckedModeBanner: false,
-        theme: myThemes(),
-        routerConfig: _appRouter.config(),
-        localizationsDelegates: const [
-          S.delegate,
-          GlobalMaterialLocalizations.delegate,
-          GlobalWidgetsLocalizations.delegate,
-          GlobalCupertinoLocalizations.delegate,
-        ],
-        supportedLocales: S.delegate.supportedLocales,
-      ),
+    return MaterialApp.router(
+      useInheritedMediaQuery: true,
+      title: appTitle,
+      debugShowCheckedModeBanner: false,
+      theme: myThemes(),
+      routerConfig: _appRouter.config(),
+      localizationsDelegates: const [
+        S.delegate,
+        GlobalMaterialLocalizations.delegate,
+        GlobalWidgetsLocalizations.delegate,
+        GlobalCupertinoLocalizations.delegate,
+      ],
+      supportedLocales: S.delegate.supportedLocales,
     );
   }
 }
