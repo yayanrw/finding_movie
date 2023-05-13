@@ -50,10 +50,10 @@ class S {
     return Localizations.of<S>(context, S);
   }
 
-  /// `Stream`
+  /// `Stream `
   String get stream {
     return Intl.message(
-      'Stream',
+      'Stream ',
       name: 'stream',
       desc: '',
       args: [],
