@@ -2,7 +2,9 @@ import 'package:dartz/dartz.dart';
 import 'package:finding_movie/core/utils/errors/failure.dart';
 import 'package:finding_movie/domain/entities/movies/movie_detail.dart';
 import 'package:finding_movie/domain/repositories/movie_repository.dart';
+import 'package:injectable/injectable.dart';
 
+@lazySingleton
 class GetDetailMovie {
   final MovieRepository movieRepository;
 
