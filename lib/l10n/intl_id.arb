@@ -1,4 +1,7 @@
 {
   "stream": "Stream ",
-  "everywhere": "Everywhere"
+  "everywhere": "Everywhere",
+  "trendingMovies": "Trending Movies",
+  "letsWatchMovies": "Lets watch movies",
+  "findingMovie": "Finding Movie"
 }
