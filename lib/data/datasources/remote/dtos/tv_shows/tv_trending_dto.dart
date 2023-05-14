@@ -9,7 +9,7 @@ class TvTrendingDto {
   String backdropPath;
   int id;
   String name;
-  @JsonKey(name: "origin_language")
+  @JsonKey(name: "original_language")
   String originalLanguage;
   @JsonKey(name: "original_name")
   String originalName;
