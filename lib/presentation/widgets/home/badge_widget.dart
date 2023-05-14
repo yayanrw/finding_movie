@@ -4,15 +4,22 @@ import 'package:finding_movie/core/theme/my_colors.dart';
 import 'package:flutter/material.dart';
 
 class BadgeWidget extends StatelessWidget {
-  const BadgeWidget({Key? key, required this.widget}) : super(key: key);
+  const BadgeWidget({
+    Key? key,
+    required this.widget,
+    required this.height,
+    required this.width,
+  }) : super(key: key);
 
   final Widget widget;
+  final double height;
+  final double width;
 
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      height: 67,
-      width: 228,
+      height: height,
+      width: width,
       child: ClipRRect(
         borderRadius: BorderRadius.circular(secondRadius),
         child: Stack(
@@ -34,7 +41,7 @@ class BadgeWidget extends StatelessWidget {
                   begin: Alignment.topLeft,
                   end: Alignment.bottomRight,
                   colors: [
-                    Colors.white.withOpacity(0.2),
+                    Colors.white.withOpacity(0.1),
                     Colors.white.withOpacity(0.0),
                   ],
                 ),
