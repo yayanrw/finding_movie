@@ -13,8 +13,8 @@ MovieTrendingResponse _$MovieTrendingResponseFromJson(
       results: (json['results'] as List<dynamic>)
           .map((e) => MovieTrendingDto.fromJson(e as Map<String, dynamic>))
           .toList(),
-      totalPages: json['totalPages'] as int,
-      totalResults: json['totalResults'] as int,
+      totalPages: json['total_pages'] as int,
+      totalResults: json['total_results'] as int,
     );
 
 Map<String, dynamic> _$MovieTrendingResponseToJson(
@@ -22,6 +22,6 @@ Map<String, dynamic> _$MovieTrendingResponseToJson(
     <String, dynamic>{
       'page': instance.page,
       'results': instance.results,
-      'totalPages': instance.totalPages,
-      'totalResults': instance.totalResults,
+      'total_pages': instance.totalPages,
+      'total_results': instance.totalResults,
     };

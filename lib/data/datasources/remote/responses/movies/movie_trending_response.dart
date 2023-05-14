@@ -15,7 +15,11 @@ class MovieTrendingResponse {
 
   int page;
   List<MovieTrendingDto> results;
+
+  @JsonKey(name: "total_pages")
   int totalPages;
+
+  @JsonKey(name: "total_results")
   int totalResults;
 
   factory MovieTrendingResponse.fromJson(Map<String, dynamic> json) =>
