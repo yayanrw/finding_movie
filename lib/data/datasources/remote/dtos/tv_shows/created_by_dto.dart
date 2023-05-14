@@ -5,9 +5,11 @@ part 'created_by_dto.g.dart';
 @JsonSerializable()
 class CreatedByDto {
   int id;
+  @JsonKey(name: "credit_id")
   String creditId;
   String name;
   int gender;
+  @JsonKey(name: "profile_path")
   String profilePath;
 
   CreatedByDto({

@@ -8,17 +8,17 @@ part of 'created_by_dto.dart';
 
 CreatedByDto _$CreatedByDtoFromJson(Map<String, dynamic> json) => CreatedByDto(
       id: json['id'] as int,
-      creditId: json['creditId'] as String,
+      creditId: json['credit_id'] as String,
       name: json['name'] as String,
       gender: json['gender'] as int,
-      profilePath: json['profilePath'] as String,
+      profilePath: json['profile_path'] as String,
     );
 
 Map<String, dynamic> _$CreatedByDtoToJson(CreatedByDto instance) =>
     <String, dynamic>{
       'id': instance.id,
-      'creditId': instance.creditId,
+      'credit_id': instance.creditId,
       'name': instance.name,
       'gender': instance.gender,
-      'profilePath': instance.profilePath,
+      'profile_path': instance.profilePath,
     };
