@@ -6,28 +6,28 @@ TextTheme myTextTheme({Color? color, FontWeight? fontWeight}) {
 
   return TextTheme(
     titleLarge: TextStyle(
-      fontSize: 28.91,
+      fontSize: 25.95,
       fontWeight: fontWeight ?? FontWeight.w400,
       fontStyle: FontStyle.normal,
-      height: 0,
+      height: 1.5,
       color: newColor,
     ),
     titleMedium: TextStyle(
-      fontSize: 19.27,
+      fontSize: 17.3,
       fontWeight: fontWeight ?? FontWeight.w400,
       fontStyle: FontStyle.normal,
-      height: 0,
+      height: 1.5,
       color: newColor,
     ),
     titleSmall: TextStyle(
-      fontSize: 14.45,
+      fontSize: 12.98,
       fontWeight: fontWeight ?? FontWeight.w400,
       fontStyle: FontStyle.normal,
-      height: 2.1,
+      height: 1.5,
       color: newColor,
     ),
     labelSmall: TextStyle(
-      fontSize: 9.64,
+      fontSize: 8.64,
       fontWeight: fontWeight ?? FontWeight.w400,
       fontStyle: FontStyle.normal,
       height: 0,
