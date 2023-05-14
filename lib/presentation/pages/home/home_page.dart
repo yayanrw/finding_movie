@@ -42,7 +42,7 @@ class HomePage extends StatelessWidget {
                   const BannerWidget(),
                   const SizedBox(height: 43),
                   Text(
-                    S.of(context).trending,
+                    S.of(context).trendingMovies,
                     style: myTextTheme().titleLarge,
                   )
                 ],
