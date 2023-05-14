@@ -11,4 +11,6 @@ class MyColors {
   static Color yellowEndGradient = const Color(0xffFBEC65);
   static Color bgTextColor = const Color(0xffDADADA);
   static Color bgBlack = const Color(0xff000000);
+  static Color bgWhiteStartGradient = const Color(0x40FFFFFF);
+  static Color bgWhiteEndGradient = const Color(0x90FFFFFF);
 }
