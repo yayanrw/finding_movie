@@ -25,6 +25,8 @@ class BannerWidget extends StatelessWidget {
               left: 12.98,
               bottom: 8.65,
               child: BadgeWidget(
+                height: 67,
+                width: 228,
                 widget: SizedBox(
                   width: double.infinity,
                   child: Row(
