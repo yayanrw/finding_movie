@@ -3,6 +3,7 @@ import 'package:finding_movie/core/config/constants.dart';
 import 'package:finding_movie/core/theme/my_colors.dart';
 import 'package:finding_movie/core/theme/my_text_theme.dart';
 import 'package:finding_movie/generated/l10n.dart';
+import 'package:finding_movie/presentation/widgets/home/banner_widget.dart';
 import 'package:flutter/material.dart';
 
 @RoutePage()
@@ -21,7 +22,7 @@ class HomePage extends StatelessWidget {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  const SizedBox(height: 53),
+                  const SizedBox(height: 47),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.start,
                     children: [
@@ -36,6 +37,13 @@ class HomePage extends StatelessWidget {
                             myTextTheme(color: MyColors.textWhite).titleLarge,
                       ),
                     ],
+                  ),
+                  const SizedBox(height: 40),
+                  const BannerWidget(),
+                  const SizedBox(height: 43),
+                  Text(
+                    S.of(context).trending,
+                    style: myTextTheme().titleLarge,
                   )
                 ],
               ),
