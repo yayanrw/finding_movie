@@ -5,19 +5,29 @@ part 'tv_trending_dto.g.dart';
 @JsonSerializable()
 class TvTrendingDto {
   bool adult;
+  @JsonKey(name: "backdrop_path")
   String backdropPath;
   int id;
   String name;
+  @JsonKey(name: "origin_language")
   String originalLanguage;
+  @JsonKey(name: "original_name")
   String originalName;
   String overview;
+  @JsonKey(name: "poster_path")
   String posterPath;
+  @JsonKey(name: "media_type")
   String mediaType;
+  @JsonKey(name: "genre_ids")
   List<int> genreIds;
   double popularity;
+  @JsonKey(name: "first_air_date")
   DateTime firstAirDate;
+  @JsonKey(name: "vote_average")
   double voteAverage;
+  @JsonKey(name: "vote_count")
   int voteCount;
+  @JsonKey(name: "origin_country")
   List<String> originCountry;
 
   TvTrendingDto({

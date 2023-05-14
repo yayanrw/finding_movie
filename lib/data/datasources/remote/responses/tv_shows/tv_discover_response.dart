@@ -7,7 +7,9 @@ part 'tv_discover_response.g.dart';
 class TvDiscoverResponse {
   int page;
   List<TvDiscoverDto> results;
+  @JsonKey(name: "total_pages")
   int totalPages;
+  @JsonKey(name: "total_results")
   int totalResults;
 
   TvDiscoverResponse({

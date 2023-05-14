@@ -4,12 +4,16 @@ part 'season_dto.g.dart';
 
 @JsonSerializable()
 class SeasonDto {
+  @JsonKey(name: "air_date")
   DateTime airDate;
+  @JsonKey(name: "episode_count")
   int episodeCount;
   int id;
   String name;
   String overview;
+  @JsonKey(name: "poster_path")
   String posterPath;
+  @JsonKey(name: "season_number")
   int seasonNumber;
 
   SeasonDto({

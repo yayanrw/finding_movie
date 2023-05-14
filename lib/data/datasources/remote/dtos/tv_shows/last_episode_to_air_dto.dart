@@ -7,14 +7,22 @@ class LastEpisodeToAirDto {
   int id;
   String name;
   String overview;
+  @JsonKey(name: "vote_average")
   double voteAverage;
+  @JsonKey(name: "vote_count")
   int voteCount;
+  @JsonKey(name: "air_date")
   DateTime airDate;
+  @JsonKey(name: "episode_number")
   int episodeNumber;
+  @JsonKey(name: "production_code")
   String productionCode;
   int runtime;
+  @JsonKey(name: "season_number")
   int seasonNumber;
+  @JsonKey(name: "show_id")
   int showId;
+  @JsonKey(name: "still_path")
   String stillPath;
 
   LastEpisodeToAirDto({

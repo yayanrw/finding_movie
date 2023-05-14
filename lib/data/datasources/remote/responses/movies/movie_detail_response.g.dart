@@ -9,69 +9,69 @@ part of 'movie_detail_response.dart';
 MovieDetailResponse _$MovieDetailResponseFromJson(Map<String, dynamic> json) =>
     MovieDetailResponse(
       adult: json['adult'] as bool,
-      backdropPath: json['backdropPath'] as String,
-      belongsToCollection: json['belongsToCollection'] == null
+      backdropPath: json['backdrop_path'] as String,
+      belongsToCollection: json['belongs_to_collection'] == null
           ? null
           : BelongsToCollectionDto.fromJson(
-              json['belongsToCollection'] as Map<String, dynamic>),
+              json['belongs_to_collection'] as Map<String, dynamic>),
       budget: json['budget'] as int,
       genres: (json['genres'] as List<dynamic>)
           .map((e) => GenreDto.fromJson(e as Map<String, dynamic>))
           .toList(),
       homepage: json['homepage'] as String,
       id: json['id'] as int,
-      imdbId: json['imdbId'] as String,
-      originalLanguage: json['originalLanguage'] as String,
-      originalTitle: json['originalTitle'] as String,
+      imdbId: json['imdb_id'] as String,
+      originalLanguage: json['original_language'] as String,
+      originalTitle: json['original_title'] as String,
       overview: json['overview'] as String,
       popularity: (json['popularity'] as num).toDouble(),
-      posterPath: json['posterPath'] as String,
-      productionCompanies: (json['productionCompanies'] as List<dynamic>)
+      posterPath: json['poster_path'] as String,
+      productionCompanies: (json['production_companies'] as List<dynamic>)
           .map((e) => ProductionCompanyDto.fromJson(e as Map<String, dynamic>))
           .toList(),
-      productionCountries: (json['productionCountries'] as List<dynamic>)
+      productionCountries: (json['production_countries'] as List<dynamic>)
           .map((e) => ProductionCountryDto.fromJson(e as Map<String, dynamic>))
           .toList(),
-      releaseDate: DateTime.parse(json['releaseDate'] as String),
+      releaseDate: DateTime.parse(json['release_date'] as String),
       revenue: json['revenue'] as int,
       runtime: json['runtime'] as int,
-      spokenLanguages: (json['spokenLanguages'] as List<dynamic>)
+      spokenLanguages: (json['spoken_languages'] as List<dynamic>)
           .map((e) => SpokenLanguageDto.fromJson(e as Map<String, dynamic>))
           .toList(),
       status: json['status'] as String,
       tagline: json['tagline'] as String,
       title: json['title'] as String,
       video: json['video'] as bool,
-      voteAverage: (json['voteAverage'] as num).toDouble(),
-      voteCount: json['voteCount'] as int,
+      voteAverage: (json['vote_average'] as num).toDouble(),
+      voteCount: json['vote_count'] as int,
     );
 
 Map<String, dynamic> _$MovieDetailResponseToJson(
         MovieDetailResponse instance) =>
     <String, dynamic>{
       'adult': instance.adult,
-      'backdropPath': instance.backdropPath,
-      'belongsToCollection': instance.belongsToCollection,
+      'backdrop_path': instance.backdropPath,
+      'belongs_to_collection': instance.belongsToCollection,
       'budget': instance.budget,
       'genres': instance.genres,
       'homepage': instance.homepage,
       'id': instance.id,
-      'imdbId': instance.imdbId,
-      'originalLanguage': instance.originalLanguage,
-      'originalTitle': instance.originalTitle,
+      'imdb_id': instance.imdbId,
+      'original_language': instance.originalLanguage,
+      'original_title': instance.originalTitle,
       'overview': instance.overview,
       'popularity': instance.popularity,
-      'posterPath': instance.posterPath,
-      'productionCompanies': instance.productionCompanies,
-      'productionCountries': instance.productionCountries,
-      'releaseDate': instance.releaseDate.toIso8601String(),
+      'poster_path': instance.posterPath,
+      'production_companies': instance.productionCompanies,
+      'production_countries': instance.productionCountries,
+      'release_date': instance.releaseDate.toIso8601String(),
       'revenue': instance.revenue,
       'runtime': instance.runtime,
-      'spokenLanguages': instance.spokenLanguages,
+      'spoken_languages': instance.spokenLanguages,
       'status': instance.status,
       'tagline': instance.tagline,
       'title': instance.title,
       'video': instance.video,
-      'voteAverage': instance.voteAverage,
-      'voteCount': instance.voteCount,
+      'vote_average': instance.voteAverage,
+      'vote_count': instance.voteCount,
     };

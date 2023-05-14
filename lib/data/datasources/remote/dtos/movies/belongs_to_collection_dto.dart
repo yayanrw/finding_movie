@@ -6,7 +6,9 @@ part 'belongs_to_collection_dto.g.dart';
 class BelongsToCollectionDto {
   int id;
   String name;
+  @JsonKey(name: "poster_path")
   String posterPath;
+  @JsonKey(name: "backdrop_path")
   String backdropPath;
 
   BelongsToCollectionDto({

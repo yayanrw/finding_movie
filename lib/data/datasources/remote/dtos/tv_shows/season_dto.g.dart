@@ -7,21 +7,21 @@ part of 'season_dto.dart';
 // **************************************************************************
 
 SeasonDto _$SeasonDtoFromJson(Map<String, dynamic> json) => SeasonDto(
-      airDate: DateTime.parse(json['airDate'] as String),
-      episodeCount: json['episodeCount'] as int,
+      airDate: DateTime.parse(json['air_date'] as String),
+      episodeCount: json['episode_count'] as int,
       id: json['id'] as int,
       name: json['name'] as String,
       overview: json['overview'] as String,
-      posterPath: json['posterPath'] as String,
-      seasonNumber: json['seasonNumber'] as int,
+      posterPath: json['poster_path'] as String,
+      seasonNumber: json['season_number'] as int,
     );
 
 Map<String, dynamic> _$SeasonDtoToJson(SeasonDto instance) => <String, dynamic>{
-      'airDate': instance.airDate.toIso8601String(),
-      'episodeCount': instance.episodeCount,
+      'air_date': instance.airDate.toIso8601String(),
+      'episode_count': instance.episodeCount,
       'id': instance.id,
       'name': instance.name,
       'overview': instance.overview,
-      'posterPath': instance.posterPath,
-      'seasonNumber': instance.seasonNumber,
+      'poster_path': instance.posterPath,
+      'season_number': instance.seasonNumber,
     };

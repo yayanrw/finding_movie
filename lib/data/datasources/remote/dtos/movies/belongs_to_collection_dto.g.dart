@@ -11,8 +11,8 @@ BelongsToCollectionDto _$BelongsToCollectionDtoFromJson(
     BelongsToCollectionDto(
       id: json['id'] as int,
       name: json['name'] as String,
-      posterPath: json['posterPath'] as String,
-      backdropPath: json['backdropPath'] as String,
+      posterPath: json['poster_path'] as String,
+      backdropPath: json['backdrop_path'] as String,
     );
 
 Map<String, dynamic> _$BelongsToCollectionDtoToJson(
@@ -20,6 +20,6 @@ Map<String, dynamic> _$BelongsToCollectionDtoToJson(
     <String, dynamic>{
       'id': instance.id,
       'name': instance.name,
-      'posterPath': instance.posterPath,
-      'backdropPath': instance.backdropPath,
+      'poster_path': instance.posterPath,
+      'backdrop_path': instance.backdropPath,
     };

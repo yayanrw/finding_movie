@@ -9,38 +9,38 @@ part of 'tv_discover_dto.dart';
 TvDiscoverDto _$TvDiscoverDtoFromJson(Map<String, dynamic> json) =>
     TvDiscoverDto(
       adult: json['adult'] as bool?,
-      backdropPath: json['backdropPath'] as String,
-      firstAirDate: DateTime.parse(json['firstAirDate'] as String),
+      backdropPath: json['backdrop_path'] as String,
+      firstAirDate: DateTime.parse(json['first_air_date'] as String),
       genreIds:
-          (json['genreIds'] as List<dynamic>).map((e) => e as int).toList(),
+          (json['genre_ids'] as List<dynamic>).map((e) => e as int).toList(),
       id: json['id'] as int,
       name: json['name'] as String,
-      originCountry: (json['originCountry'] as List<dynamic>)
+      originCountry: (json['origin_country'] as List<dynamic>)
           .map((e) => e as String)
           .toList(),
-      originalLanguage: json['originalLanguage'] as String,
-      originalName: json['originalName'] as String,
+      originalLanguage: json['original_language'] as String,
+      originalName: json['original_name'] as String,
       overview: json['overview'] as String,
       popularity: (json['popularity'] as num).toDouble(),
-      posterPath: json['posterPath'] as String,
-      voteAverage: (json['voteAverage'] as num).toDouble(),
-      voteCount: json['voteCount'] as int,
+      posterPath: json['poster_path'] as String,
+      voteAverage: (json['vote_average'] as num).toDouble(),
+      voteCount: json['vote_count'] as int,
     );
 
 Map<String, dynamic> _$TvDiscoverDtoToJson(TvDiscoverDto instance) =>
     <String, dynamic>{
       'adult': instance.adult,
-      'backdropPath': instance.backdropPath,
-      'firstAirDate': instance.firstAirDate.toIso8601String(),
-      'genreIds': instance.genreIds,
+      'backdrop_path': instance.backdropPath,
+      'first_air_date': instance.firstAirDate.toIso8601String(),
+      'genre_ids': instance.genreIds,
       'id': instance.id,
       'name': instance.name,
-      'originCountry': instance.originCountry,
-      'originalLanguage': instance.originalLanguage,
-      'originalName': instance.originalName,
+      'origin_country': instance.originCountry,
+      'original_language': instance.originalLanguage,
+      'original_name': instance.originalName,
       'overview': instance.overview,
       'popularity': instance.popularity,
-      'posterPath': instance.posterPath,
-      'voteAverage': instance.voteAverage,
-      'voteCount': instance.voteCount,
+      'poster_path': instance.posterPath,
+      'vote_average': instance.voteAverage,
+      'vote_count': instance.voteCount,
     };

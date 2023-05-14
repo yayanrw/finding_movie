@@ -4,6 +4,7 @@ part 'spoken_language_dto.g.dart';
 
 @JsonSerializable()
 class SpokenLanguageDto {
+  @JsonKey(name: "english_name")
   String englishName;
   String iso6391;
   String name;

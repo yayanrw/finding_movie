@@ -7,7 +7,9 @@ part 'movie_discover_response.g.dart';
 class MovieDiscoverResponse {
   int page;
   List<MovieDiscoverDto> results;
+  @JsonKey(name: "total_pages")
   int totalPages;
+  @JsonKey(name: "total_results")
   int totalResults;
 
   MovieDiscoverResponse({

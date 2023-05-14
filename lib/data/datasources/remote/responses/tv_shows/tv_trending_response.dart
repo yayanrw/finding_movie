@@ -7,7 +7,9 @@ part 'tv_trending_response.g.dart';
 class TvTrendingResponse {
   int page;
   List<TvTrendingDto> results;
+  @JsonKey(name: "total_pages")
   int totalPages;
+  @JsonKey(name: "total_results")
   int totalResults;
 
   TvTrendingResponse({
