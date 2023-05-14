@@ -99,6 +99,26 @@ class S {
       args: [],
     );
   }
+
+  /// `IMDb`
+  String get imdb {
+    return Intl.message(
+      'IMDb',
+      name: 'imdb',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Trending Tv Shows`
+  String get trendingTvShows {
+    return Intl.message(
+      'Trending Tv Shows',
+      name: 'trendingTvShows',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

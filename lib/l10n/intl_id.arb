@@ -3,5 +3,7 @@
   "everywhere": "Everywhere",
   "trendingMovies": "Trending Movies",
   "letsWatchMovies": "Lets watch movies",
-  "findingMovie": "Finding Movie"
+  "findingMovie": "Finding Movie",
+  "imdb": "IMDb",
+  "trendingTvShows": "Trending Tv Shows"
 }

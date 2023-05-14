@@ -24,10 +24,13 @@ class MessageLookup extends MessageLookupByLibrary {
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
         "everywhere": MessageLookupByLibrary.simpleMessage("Everywhere"),
         "findingMovie": MessageLookupByLibrary.simpleMessage("Finding Movie"),
+        "imdb": MessageLookupByLibrary.simpleMessage("IMDb"),
         "letsWatchMovies":
             MessageLookupByLibrary.simpleMessage("Lets watch movies"),
         "stream": MessageLookupByLibrary.simpleMessage("Stream "),
         "trendingMovies":
-            MessageLookupByLibrary.simpleMessage("Trending Movies")
+            MessageLookupByLibrary.simpleMessage("Trending Movies"),
+        "trendingTvShows":
+            MessageLookupByLibrary.simpleMessage("Trending Tv Shows")
       };
 }
