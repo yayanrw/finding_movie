@@ -20,7 +20,7 @@ class TrendingImageWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      width: 279,
+      width: MediaQuery.of(context).size.width,
       height: 363,
       child: ClipRRect(
         borderRadius: BorderRadius.circular(defaultRadius),
