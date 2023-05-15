@@ -39,7 +39,7 @@ class TrendingImageWidget extends StatelessWidget {
                 top: 17,
                 right: 17,
                 child: BadgeWidget(
-                  height: 50,
+                  height: 56,
                   width: 83,
                   widget: SizedBox(
                     width: double.infinity,
