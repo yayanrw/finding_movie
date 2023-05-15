@@ -9,7 +9,7 @@ part of 'tv_detail_response.dart';
 TvDetailResponse _$TvDetailResponseFromJson(Map<String, dynamic> json) =>
     TvDetailResponse(
       adult: json['adult'] as bool,
-      backdropPath: json['backdrop_path'] as String,
+      backdropPath: json['backdrop_path'] as String?,
       createdBy: (json['created_by'] as List<dynamic>)
           .map((e) => CreatedByDto.fromJson(e as Map<String, dynamic>))
           .toList(),
@@ -40,7 +40,7 @@ TvDetailResponse _$TvDetailResponseFromJson(Map<String, dynamic> json) =>
       originalName: json['original_name'] as String,
       overview: json['overview'] as String,
       popularity: (json['popularity'] as num).toDouble(),
-      posterPath: json['poster_path'] as String,
+      posterPath: json['poster_path'] as String?,
       productionCompanies: (json['production_companies'] as List<dynamic>)
           .map((e) => NetworkDto.fromJson(e as Map<String, dynamic>))
           .toList(),

@@ -9,7 +9,7 @@ part of 'movie_detail_response.dart';
 MovieDetailResponse _$MovieDetailResponseFromJson(Map<String, dynamic> json) =>
     MovieDetailResponse(
       adult: json['adult'] as bool,
-      backdropPath: json['backdrop_path'] as String,
+      backdropPath: json['backdrop_path'] as String?,
       belongsToCollection: json['belongs_to_collection'] == null
           ? null
           : BelongsToCollectionDto.fromJson(
@@ -25,7 +25,7 @@ MovieDetailResponse _$MovieDetailResponseFromJson(Map<String, dynamic> json) =>
       originalTitle: json['original_title'] as String,
       overview: json['overview'] as String,
       popularity: (json['popularity'] as num).toDouble(),
-      posterPath: json['poster_path'] as String,
+      posterPath: json['poster_path'] as String?,
       productionCompanies: (json['production_companies'] as List<dynamic>)
           .map((e) => ProductionCompanyDto.fromJson(e as Map<String, dynamic>))
           .toList(),
