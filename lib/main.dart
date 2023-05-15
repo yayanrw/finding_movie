@@ -2,6 +2,7 @@ import 'package:finding_movie/core/config/constants.dart';
 import 'package:finding_movie/core/router/router.dart';
 import 'package:finding_movie/core/theme/my_themes.dart';
 import 'package:finding_movie/generated/l10n.dart';
+import 'package:finding_movie/presentation/pages/detail/detail_notifier.dart';
 import 'package:finding_movie/presentation/pages/home/home_notifier.dart';
 import 'package:flutter/material.dart';
 import 'package:finding_movie/core/di/injection.dart' as di;
@@ -29,6 +30,7 @@ class MyApp extends StatelessWidget {
     return MultiProvider(
       providers: [
         ChangeNotifierProvider(create: (_) => di.getIt<HomeNotifier>()),
+        ChangeNotifierProvider(create: (_) => di.getIt<DetailNotifier>()),
       ],
       child: MaterialApp.router(
         useInheritedMediaQuery: true,
