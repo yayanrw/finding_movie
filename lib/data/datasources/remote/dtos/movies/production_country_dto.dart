@@ -4,6 +4,7 @@ part 'production_country_dto.g.dart';
 
 @JsonSerializable()
 class ProductionCountryDto {
+  @JsonKey(name: "iso_3166_1")
   String iso31661;
   String name;
 
