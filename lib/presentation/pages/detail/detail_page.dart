@@ -260,6 +260,7 @@ class _DetailPageState extends State<DetailPage> {
                               style: myTextTheme(color: MyColors.textGrey)
                                   .labelMedium,
                               textAlign: TextAlign.center,
+                              maxLines: 1,
                             ),
                           ),
                         ),
