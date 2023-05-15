@@ -2,8 +2,10 @@ import 'package:dartz/dartz.dart';
 import 'package:finding_movie/core/utils/errors/failure.dart';
 import 'package:finding_movie/core/utils/request_state.dart';
 import 'package:finding_movie/domain/entities/movies/movie_detail.dart';
+import 'package:finding_movie/domain/entities/movies/movie_discover.dart';
 import 'package:finding_movie/domain/entities/movies/movie_trending.dart';
 import 'package:finding_movie/domain/entities/tv_shows/tv_detail.dart';
+import 'package:finding_movie/domain/entities/tv_shows/tv_discover.dart';
 import 'package:finding_movie/domain/entities/tv_shows/tv_trending.dart';
 import 'package:finding_movie/domain/usecases/movies/get_detail_movie.dart';
 import 'package:finding_movie/domain/usecases/movies/get_similar_movies.dart';
@@ -26,11 +28,21 @@ class DetailNotifier extends ChangeNotifier {
   RequestState _requestStateDetail = RequestState.empty;
   late dynamic _detail;
 
+  String _messageSimilar = "";
+  RequestState _requestStateSimilar = RequestState.empty;
+  late List<dynamic> _similar;
+
   String get messageDetail => _messageDetail;
 
   RequestState get requestStateDetail => _requestStateDetail;
 
   dynamic get detail => _detail;
+
+  String get messageSimilar => _messageSimilar;
+
+  RequestState get requestStateSimilar => _requestStateSimilar;
+
+  List<dynamic> get similar => _similar;
 
   Future<void> fetchDetail(int id, dynamic type) async {
     _requestStateDetail = RequestState.loading;
@@ -64,6 +76,46 @@ class DetailNotifier extends ChangeNotifier {
         (TvDetail success) {
           _requestStateDetail = RequestState.loaded;
           _detail = success;
+          notifyListeners();
+        },
+      );
+    }
+  }
+
+  Future<void> fetchSimilar(int id, dynamic type) async {
+    _requestStateDetail = RequestState.loading;
+    notifyListeners();
+
+    if (type is MovieTrending) {
+      final Either<Failure, List<MovieDiscover>> result =
+          await getSimilarMovies.call(id);
+
+      result.fold(
+        (Failure failure) {
+          _requestStateSimilar = RequestState.error;
+          _messageSimilar = failure.message;
+          notifyListeners();
+        },
+        (List<MovieDiscover> success) {
+          _requestStateSimilar = RequestState.loaded;
+          _similar = success;
+          notifyListeners();
+        },
+      );
+    }
+    if (type is TvTrending) {
+      final Either<Failure, List<TvDiscover>> result =
+          await getSimilarTvShows.call(id);
+
+      result.fold(
+        (Failure failure) {
+          _requestStateSimilar = RequestState.error;
+          _messageSimilar = failure.message;
+          notifyListeners();
+        },
+        (List<TvDiscover> success) {
+          _requestStateSimilar = RequestState.loaded;
+          _similar = success;
           notifyListeners();
         },
       );
