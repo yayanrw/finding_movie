@@ -12,7 +12,7 @@ class HeaderWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      height: 310,
+      height: 360,
       width: double.infinity,
       child: ClipRRect(
         child: Stack(
@@ -44,7 +44,7 @@ class HeaderWidget extends StatelessWidget {
               ),
             ),
             Positioned(
-              top: 16,
+              top: 24,
               left: 16,
               child: GestureDetector(
                 onTap: () {
