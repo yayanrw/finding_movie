@@ -10,9 +10,9 @@ BelongsToCollectionDto _$BelongsToCollectionDtoFromJson(
         Map<String, dynamic> json) =>
     BelongsToCollectionDto(
       id: json['id'] as int,
-      name: json['name'] as String,
-      posterPath: json['poster_path'] as String,
-      backdropPath: json['backdrop_path'] as String,
+      name: json['name'] as String?,
+      posterPath: json['poster_path'] as String?,
+      backdropPath: json['backdrop_path'] as String?,
     );
 
 Map<String, dynamic> _$BelongsToCollectionDtoToJson(

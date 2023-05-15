@@ -6,16 +6,16 @@ part 'network_dto.g.dart';
 class NetworkDto {
   int id;
   @JsonKey(name: "logo_path")
-  String logoPath;
-  String name;
+  String? logoPath;
+  String? name;
   @JsonKey(name: "origin_country")
-  String originCountry;
+  String? originCountry;
 
   NetworkDto({
     required this.id,
-    required this.logoPath,
-    required this.name,
-    required this.originCountry,
+    this.logoPath,
+    this.name,
+    this.originCountry,
   });
 
   factory NetworkDto.fromJson(Map<String, dynamic> json) =>

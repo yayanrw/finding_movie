@@ -5,39 +5,39 @@ part 'last_episode_to_air_dto.g.dart';
 @JsonSerializable()
 class LastEpisodeToAirDto {
   int id;
-  String name;
-  String overview;
+  String? name;
+  String? overview;
   @JsonKey(name: "vote_average")
-  double voteAverage;
+  double? voteAverage;
   @JsonKey(name: "vote_count")
-  int voteCount;
+  int? voteCount;
   @JsonKey(name: "air_date")
-  DateTime airDate;
+  DateTime? airDate;
   @JsonKey(name: "episode_number")
-  int episodeNumber;
+  int? episodeNumber;
   @JsonKey(name: "production_code")
-  String productionCode;
-  int runtime;
+  String? productionCode;
+  int? runtime;
   @JsonKey(name: "season_number")
-  int seasonNumber;
+  int? seasonNumber;
   @JsonKey(name: "show_id")
-  int showId;
+  int? showId;
   @JsonKey(name: "still_path")
-  String stillPath;
+  String? stillPath;
 
   LastEpisodeToAirDto({
     required this.id,
-    required this.name,
-    required this.overview,
-    required this.voteAverage,
-    required this.voteCount,
-    required this.airDate,
-    required this.episodeNumber,
-    required this.productionCode,
-    required this.runtime,
-    required this.seasonNumber,
-    required this.showId,
-    required this.stillPath,
+    this.name,
+    this.overview,
+    this.voteAverage,
+    this.voteCount,
+    this.airDate,
+    this.episodeNumber,
+    this.productionCode,
+    this.runtime,
+    this.seasonNumber,
+    this.showId,
+    this.stillPath,
   });
 
   factory LastEpisodeToAirDto.fromJson(Map<String, dynamic> json) =>

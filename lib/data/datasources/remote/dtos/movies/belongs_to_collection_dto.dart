@@ -5,17 +5,17 @@ part 'belongs_to_collection_dto.g.dart';
 @JsonSerializable()
 class BelongsToCollectionDto {
   int id;
-  String name;
+  String? name;
   @JsonKey(name: "poster_path")
-  String posterPath;
+  String? posterPath;
   @JsonKey(name: "backdrop_path")
-  String backdropPath;
+  String? backdropPath;
 
   BelongsToCollectionDto({
     required this.id,
-    required this.name,
-    required this.posterPath,
-    required this.backdropPath,
+    this.name,
+    this.posterPath,
+    this.backdropPath,
   });
 
   factory BelongsToCollectionDto.fromJson(Map<String, dynamic> json) =>

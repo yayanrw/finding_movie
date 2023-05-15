@@ -8,9 +8,9 @@ part of 'network_dto.dart';
 
 NetworkDto _$NetworkDtoFromJson(Map<String, dynamic> json) => NetworkDto(
       id: json['id'] as int,
-      logoPath: json['logo_path'] as String,
-      name: json['name'] as String,
-      originCountry: json['origin_country'] as String,
+      logoPath: json['logo_path'] as String?,
+      name: json['name'] as String?,
+      originCountry: json['origin_country'] as String?,
     );
 
 Map<String, dynamic> _$NetworkDtoToJson(NetworkDto instance) =>

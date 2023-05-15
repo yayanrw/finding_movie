@@ -10,9 +10,9 @@ ProductionCompanyDto _$ProductionCompanyDtoFromJson(
         Map<String, dynamic> json) =>
     ProductionCompanyDto(
       id: json['id'] as int,
-      logoPath: json['logo_path'] as String,
-      name: json['name'] as String,
-      originCountry: json['origin_country'] as String,
+      logoPath: json['logo_path'] as String?,
+      name: json['name'] as String?,
+      originCountry: json['origin_country'] as String?,
     );
 
 Map<String, dynamic> _$ProductionCompanyDtoToJson(

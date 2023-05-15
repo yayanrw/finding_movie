@@ -7,17 +7,17 @@ class CreatedByDto {
   int id;
   @JsonKey(name: "credit_id")
   String creditId;
-  String name;
-  int gender;
+  String? name;
+  int? gender;
   @JsonKey(name: "profile_path")
-  String profilePath;
+  String? profilePath;
 
   CreatedByDto({
     required this.id,
     required this.creditId,
-    required this.name,
-    required this.gender,
-    required this.profilePath,
+    this.name,
+    this.gender,
+    this.profilePath,
   });
 
   factory CreatedByDto.fromJson(Map<String, dynamic> json) =>

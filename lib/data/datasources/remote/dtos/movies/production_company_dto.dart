@@ -6,16 +6,16 @@ part 'production_company_dto.g.dart';
 class ProductionCompanyDto {
   int id;
   @JsonKey(name: "logo_path")
-  String logoPath;
-  String name;
+  String? logoPath;
+  String? name;
   @JsonKey(name: "origin_country")
-  String originCountry;
+  String? originCountry;
 
   ProductionCompanyDto({
     required this.id,
-    required this.logoPath,
-    required this.name,
-    required this.originCountry,
+    this.logoPath,
+    this.name,
+    this.originCountry,
   });
 
   factory ProductionCompanyDto.fromJson(Map<String, dynamic> json) =>

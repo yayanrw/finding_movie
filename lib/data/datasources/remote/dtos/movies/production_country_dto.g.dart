@@ -9,8 +9,8 @@ part of 'production_country_dto.dart';
 ProductionCountryDto _$ProductionCountryDtoFromJson(
         Map<String, dynamic> json) =>
     ProductionCountryDto(
-      iso31661: json['iso_3166_1'] as String,
-      name: json['name'] as String,
+      iso31661: json['iso_3166_1'] as String?,
+      name: json['name'] as String?,
     );
 
 Map<String, dynamic> _$ProductionCountryDtoToJson(
