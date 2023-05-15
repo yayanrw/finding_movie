@@ -28,9 +28,10 @@ import '../../domain/usecases/tv_shows/get_discover_tv_shows.dart' as _i9;
 import '../../domain/usecases/tv_shows/get_search_tv_shows.dart' as _i10;
 import '../../domain/usecases/tv_shows/get_similar_tv_shows.dart' as _i11;
 import '../../domain/usecases/tv_shows/get_trending_tv_shows.dart' as _i12;
+import '../../presentation/pages/detail/detail_notifier.dart' as _i21;
 import '../../presentation/pages/home/home_notifier.dart' as _i20;
 import '../router/router.dart' as _i3;
-import 'register_module.dart' as _i21;
+import 'register_module.dart' as _i22;
 
 extension GetItInjectableX on _i1.GetIt {
   // initializes the registration of main-scope dependencies inside of GetIt
@@ -76,8 +77,14 @@ extension GetItInjectableX on _i1.GetIt {
           gh<_i19.GetTrendingMovies>(),
           gh<_i12.GetTrendingTvShows>(),
         ));
+    gh.factory<_i21.DetailNotifier>(() => _i21.DetailNotifier(
+          gh<_i15.GetDetailMovie>(),
+          gh<_i8.GetDetailTv>(),
+          gh<_i18.GetSimilarMovies>(),
+          gh<_i11.GetSimilarTvShows>(),
+        ));
     return this;
   }
 }
 
-class _$RegisterModule extends _i21.RegisterModule {}
+class _$RegisterModule extends _i22.RegisterModule {}

@@ -5,5 +5,12 @@
   "letsWatchMovies": "Lets watch movies",
   "findingMovie": "Finding Movie",
   "imdb": "IMDb",
-  "trendingTvShows": "Trending Tv Shows"
+  "trendingTvShows": "Trending Tv Shows",
+  "text4k": "4K",
+  "imdbHug": "(IMDb)",
+  "releaseDate": "Release date",
+  "genre": "Genre",
+  "synopsys": "Synopsys",
+  "relatedMovies": "Related Movies",
+  "minutes": "minutes"
 }

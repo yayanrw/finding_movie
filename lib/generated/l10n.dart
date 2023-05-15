@@ -119,6 +119,76 @@ class S {
       args: [],
     );
   }
+
+  /// `4K`
+  String get text4k {
+    return Intl.message(
+      '4K',
+      name: 'text4k',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `(IMDb)`
+  String get imdbHug {
+    return Intl.message(
+      '(IMDb)',
+      name: 'imdbHug',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Release date`
+  String get releaseDate {
+    return Intl.message(
+      'Release date',
+      name: 'releaseDate',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Genre`
+  String get genre {
+    return Intl.message(
+      'Genre',
+      name: 'genre',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Synopsys`
+  String get synopsys {
+    return Intl.message(
+      'Synopsys',
+      name: 'synopsys',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Related Movies`
+  String get relatedMovies {
+    return Intl.message(
+      'Related Movies',
+      name: 'relatedMovies',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `minutes`
+  String get minutes {
+    return Intl.message(
+      'minutes',
+      name: 'minutes',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {
