@@ -34,7 +34,12 @@ class _DetailPageState extends State<DetailPage> {
         child: Consumer<DetailNotifier>(
           builder: (context, data, _) {
             if (data.requestStateDetail == RequestState.loading) {
-              return const Center(child: CircularProgressIndicator());
+              return const Padding(
+                padding: EdgeInsetsDirectional.only(top: 200),
+                child: Center(
+                  child: CircularProgressIndicator(),
+                ),
+              );
             } else if (data.requestStateDetail == RequestState.loaded) {
               return Column(
                 children: [
