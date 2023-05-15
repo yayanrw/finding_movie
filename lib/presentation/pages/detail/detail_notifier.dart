@@ -48,7 +48,7 @@ class DetailNotifier extends ChangeNotifier {
     _requestStateDetail = RequestState.loading;
     notifyListeners();
 
-    if (type is MovieTrending) {
+    if (type is MovieTrending || type is MovieDiscover) {
       final Either<Failure, MovieDetail> result = await getDetailMovie.call(id);
 
       result.fold(
@@ -64,7 +64,7 @@ class DetailNotifier extends ChangeNotifier {
         },
       );
     }
-    if (type is TvTrending) {
+    if (type is TvTrending || type is TvDiscover ) {
       final Either<Failure, TvDetail> result = await getDetailTv.call(id);
 
       result.fold(
@@ -86,7 +86,7 @@ class DetailNotifier extends ChangeNotifier {
     _requestStateDetail = RequestState.loading;
     notifyListeners();
 
-    if (type is MovieTrending) {
+    if (type is MovieTrending || type is MovieDiscover) {
       final Either<Failure, List<MovieDiscover>> result =
           await getSimilarMovies.call(id);
 
@@ -103,7 +103,7 @@ class DetailNotifier extends ChangeNotifier {
         },
       );
     }
-    if (type is TvTrending) {
+    if (type is TvTrending || type is TvDiscover) {
       final Either<Failure, List<TvDiscover>> result =
           await getSimilarTvShows.call(id);
 
