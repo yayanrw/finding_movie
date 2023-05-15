@@ -6,7 +6,7 @@ part 'tv_trending_dto.g.dart';
 class TvTrendingDto {
   bool adult;
   @JsonKey(name: "backdrop_path")
-  String backdropPath;
+  String? backdropPath;
   int id;
   String name;
   @JsonKey(name: "original_language")
@@ -15,7 +15,7 @@ class TvTrendingDto {
   String originalName;
   String overview;
   @JsonKey(name: "poster_path")
-  String posterPath;
+  String? posterPath;
   @JsonKey(name: "media_type")
   String mediaType;
   @JsonKey(name: "genre_ids")
@@ -32,13 +32,13 @@ class TvTrendingDto {
 
   TvTrendingDto({
     required this.adult,
-    required this.backdropPath,
+    this.backdropPath,
     required this.id,
     required this.name,
     required this.originalLanguage,
     required this.originalName,
     required this.overview,
-    required this.posterPath,
+    this.posterPath,
     required this.mediaType,
     required this.genreIds,
     required this.popularity,

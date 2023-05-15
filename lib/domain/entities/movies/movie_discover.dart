@@ -32,9 +32,9 @@ class MovieDiscover extends Equatable {
 extension MovieDiscoverDtoExtension on MovieDiscoverDto {
   MovieDiscover toEntity() {
     return MovieDiscover(
-      backdropPath: backdropPath,
+      backdropPath: backdropPath ?? "5fKDsHMfY3K7vV1JFECYaafnwwx.jpg",
       id: id,
-      posterPath: posterPath,
+      posterPath: posterPath ?? "5fKDsHMfY3K7vV1JFECYaafnwwx.jpg",
       releaseDate: releaseDate,
       title: title,
       voteAverage: voteAverage,

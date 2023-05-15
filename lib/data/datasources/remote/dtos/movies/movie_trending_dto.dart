@@ -7,13 +7,13 @@ part 'movie_trending_dto.g.dart';
 class MovieTrendingDto {
   MovieTrendingDto({
     required this.adult,
-    required this.backdropPath,
+    this.backdropPath,
     required this.id,
     required this.title,
     required this.originalLanguage,
     required this.originalTitle,
     required this.overview,
-    required this.posterPath,
+    this.posterPath,
     required this.mediaType,
     required this.genreIds,
     required this.popularity,
@@ -25,7 +25,7 @@ class MovieTrendingDto {
 
   bool adult;
   @JsonKey(name: "backdrop_path")
-  String backdropPath;
+  String? backdropPath;
   int id;
   String title;
   @JsonKey(name: "original_language")
@@ -34,7 +34,7 @@ class MovieTrendingDto {
   String originalTitle;
   String overview;
   @JsonKey(name: "poster_path")
-  String posterPath;
+  String? posterPath;
   @JsonKey(name: "media_type")
   String mediaType;
   @JsonKey(name: "genre_ids")

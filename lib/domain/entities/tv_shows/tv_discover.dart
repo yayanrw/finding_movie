@@ -32,11 +32,11 @@ class TvDiscover extends Equatable {
 extension TvDiscoverDtoExtension on TvDiscoverDto {
   TvDiscover toEntity() {
     return TvDiscover(
-      backdropPath: backdropPath,
+      backdropPath: backdropPath ?? "5fKDsHMfY3K7vV1JFECYaafnwwx.jpg",
       firstAirDate: firstAirDate,
       id: id,
       name: name,
-      posterPath: posterPath,
+      posterPath: posterPath ?? "5fKDsHMfY3K7vV1JFECYaafnwwx.jpg",
       voteAverage: voteAverage,
     );
   }

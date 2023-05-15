@@ -6,7 +6,7 @@ part 'tv_discover_dto.g.dart';
 class TvDiscoverDto {
   bool? adult;
   @JsonKey(name: "backdrop_path")
-  String backdropPath;
+  String? backdropPath;
   @JsonKey(name: "first_air_date")
   DateTime firstAirDate;
   @JsonKey(name: "genre_ids")
@@ -22,7 +22,7 @@ class TvDiscoverDto {
   String overview;
   double popularity;
   @JsonKey(name: "poster_path")
-  String posterPath;
+  String? posterPath;
   @JsonKey(name: "vote_average")
   double voteAverage;
   @JsonKey(name: "vote_count")
@@ -30,7 +30,7 @@ class TvDiscoverDto {
 
   TvDiscoverDto({
     this.adult,
-    required this.backdropPath,
+    this.backdropPath,
     required this.firstAirDate,
     required this.genreIds,
     required this.id,
@@ -40,12 +40,13 @@ class TvDiscoverDto {
     required this.originalName,
     required this.overview,
     required this.popularity,
-    required this.posterPath,
+    this.posterPath,
     required this.voteAverage,
     required this.voteCount,
   });
 
-  factory TvDiscoverDto.fromJson(Map<String, dynamic> json) => _$TvDiscoverDtoFromJson(json);
+  factory TvDiscoverDto.fromJson(Map<String, dynamic> json) =>
+      _$TvDiscoverDtoFromJson(json);
 
   Map<String, dynamic> toJson() => _$TvDiscoverDtoToJson(this);
 }

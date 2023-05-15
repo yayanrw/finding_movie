@@ -32,10 +32,10 @@ class TvTrending extends Equatable {
 extension TvTrendingDtoExtension on TvTrendingDto {
   TvTrending toEntity() {
     return TvTrending(
-      backdropPath: backdropPath,
+      backdropPath: backdropPath ?? "5fKDsHMfY3K7vV1JFECYaafnwwx.jpg",
       id: id,
       name: name,
-      posterPath: posterPath,
+      posterPath: posterPath ?? "5fKDsHMfY3K7vV1JFECYaafnwwx.jpg",
       firstAirDate: firstAirDate,
       voteAverage: voteAverage,
     );

@@ -24,7 +24,7 @@ class MovieTrending extends Equatable {
 extension MovieTrendingDtoExtension on MovieTrendingDto {
   MovieTrending toEntity() {
     return MovieTrending(
-      backdropPath: backdropPath,
+      backdropPath: backdropPath ?? "5fKDsHMfY3K7vV1JFECYaafnwwx.jpg",
       id: id,
       title: title,
       releaseDate: releaseDate,

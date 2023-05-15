@@ -1,4 +1,3 @@
-
 import 'package:json_annotation/json_annotation.dart';
 
 part 'movie_discover_dto.g.dart';
@@ -7,7 +6,7 @@ part 'movie_discover_dto.g.dart';
 class MovieDiscoverDto {
   bool adult;
   @JsonKey(name: "backdrop_path")
-  String backdropPath;
+  String? backdropPath;
   @JsonKey(name: "genre_ids")
   List<int> genreIds;
   int id;
@@ -18,7 +17,7 @@ class MovieDiscoverDto {
   String overview;
   double popularity;
   @JsonKey(name: "poster_path")
-  String posterPath;
+  String? posterPath;
   @JsonKey(name: "release_date")
   DateTime releaseDate;
   String title;
@@ -30,14 +29,14 @@ class MovieDiscoverDto {
 
   MovieDiscoverDto({
     required this.adult,
-    required this.backdropPath,
+    this.backdropPath,
     required this.genreIds,
     required this.id,
     required this.originalLanguage,
     required this.originalTitle,
     required this.overview,
     required this.popularity,
-    required this.posterPath,
+    this.posterPath,
     required this.releaseDate,
     required this.title,
     required this.video,
@@ -45,7 +44,8 @@ class MovieDiscoverDto {
     required this.voteCount,
   });
 
-  factory MovieDiscoverDto.fromJson(Map<String, dynamic> json) => _$MovieDiscoverDtoFromJson(json);
+  factory MovieDiscoverDto.fromJson(Map<String, dynamic> json) =>
+      _$MovieDiscoverDtoFromJson(json);
 
   Map<String, dynamic> toJson() => _$MovieDiscoverDtoToJson(this);
 }
