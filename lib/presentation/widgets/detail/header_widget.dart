@@ -48,7 +48,7 @@ class HeaderWidget extends StatelessWidget {
               left: 16,
               child: GestureDetector(
                 onTap: () {
-                  context.router.pop();
+                  context.router.popUntilRoot();
                 },
                 child: const Icon(
                   Icons.keyboard_arrow_left_rounded,
