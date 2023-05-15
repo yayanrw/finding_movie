@@ -11,7 +11,7 @@ part 'movie_detail_response.g.dart';
 class MovieDetailResponse {
   bool adult;
   @JsonKey(name: "backdrop_path")
-  String backdropPath;
+  String? backdropPath;
   @JsonKey(name: "belongs_to_collection")
   BelongsToCollectionDto? belongsToCollection;
   int budget;
@@ -27,7 +27,7 @@ class MovieDetailResponse {
   String overview;
   double popularity;
   @JsonKey(name: "poster_path")
-  String posterPath;
+  String? posterPath;
   @JsonKey(name: "production_companies")
   List<ProductionCompanyDto> productionCompanies;
   @JsonKey(name: "production_countries")
@@ -49,7 +49,7 @@ class MovieDetailResponse {
 
   MovieDetailResponse({
     required this.adult,
-    required this.backdropPath,
+    this.backdropPath,
     this.belongsToCollection,
     required this.budget,
     required this.genres,
@@ -60,7 +60,7 @@ class MovieDetailResponse {
     required this.originalTitle,
     required this.overview,
     required this.popularity,
-    required this.posterPath,
+    this.posterPath,
     required this.productionCompanies,
     required this.productionCountries,
     required this.releaseDate,

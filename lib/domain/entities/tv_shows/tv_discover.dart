@@ -3,7 +3,7 @@ import 'package:finding_movie/data/datasources/remote/dtos/tv_shows/tv_discover_
 
 class TvDiscover extends Equatable {
   final String backdropPath;
-  final DateTime firstAirDate;
+  final String firstAirDate;
   final int id;
   final String name;
   final String posterPath;
@@ -32,11 +32,11 @@ class TvDiscover extends Equatable {
 extension TvDiscoverDtoExtension on TvDiscoverDto {
   TvDiscover toEntity() {
     return TvDiscover(
-      backdropPath: backdropPath ?? "5fKDsHMfY3K7vV1JFECYaafnwwx.jpg",
+      backdropPath: backdropPath ?? "/5fKDsHMfY3K7vV1JFECYaafnwwx.jpg",
       firstAirDate: firstAirDate,
       id: id,
       name: name,
-      posterPath: posterPath ?? "5fKDsHMfY3K7vV1JFECYaafnwwx.jpg",
+      posterPath: posterPath ?? "/5fKDsHMfY3K7vV1JFECYaafnwwx.jpg",
       voteAverage: voteAverage,
     );
   }

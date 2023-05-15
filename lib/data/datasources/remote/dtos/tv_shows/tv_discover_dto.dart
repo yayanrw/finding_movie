@@ -8,7 +8,7 @@ class TvDiscoverDto {
   @JsonKey(name: "backdrop_path")
   String? backdropPath;
   @JsonKey(name: "first_air_date")
-  DateTime firstAirDate;
+  String firstAirDate;
   @JsonKey(name: "genre_ids")
   List<int> genreIds;
   int id;

@@ -13,7 +13,7 @@ part 'tv_detail_response.g.dart';
 class TvDetailResponse {
   bool adult;
   @JsonKey(name: "backdrop_path")
-  String backdropPath;
+  String? backdropPath;
   @JsonKey(name: "created_by")
   List<CreatedByDto> createdBy;
   @JsonKey(name: "episode_run_time")
@@ -47,7 +47,7 @@ class TvDetailResponse {
   String overview;
   double popularity;
   @JsonKey(name: "poster_path")
-  String posterPath;
+  String? posterPath;
   @JsonKey(name: "production_companies")
   List<NetworkDto> productionCompanies;
   @JsonKey(name: "production_countries")
@@ -65,7 +65,7 @@ class TvDetailResponse {
 
   TvDetailResponse({
     required this.adult,
-    required this.backdropPath,
+    this.backdropPath,
     required this.createdBy,
     required this.episodeRunTime,
     required this.firstAirDate,
@@ -86,7 +86,7 @@ class TvDetailResponse {
     required this.originalName,
     required this.overview,
     required this.popularity,
-    required this.posterPath,
+    this.posterPath,
     required this.productionCompanies,
     required this.productionCountries,
     required this.seasons,

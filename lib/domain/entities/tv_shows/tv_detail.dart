@@ -39,13 +39,13 @@ class TvDetail extends Equatable {
 extension TvDetailResponseExtention on TvDetailResponse {
   TvDetail toEntity() {
     return TvDetail(
-      backdropPath: backdropPath,
+      backdropPath: backdropPath ?? "/5fKDsHMfY3K7vV1JFECYaafnwwx.jpg",
       firstAirDate: firstAirDate,
       genres: genres.map((genreDto) => genreDto.toEntity()).toList(),
       id: id,
       name: name,
       overview: overview,
-      posterPath: posterPath,
+      posterPath: posterPath ?? "/5fKDsHMfY3K7vV1JFECYaafnwwx.jpg",
       voteAverage: voteAverage,
     );
   }

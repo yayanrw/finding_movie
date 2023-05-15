@@ -6,7 +6,7 @@ class TvTrending extends Equatable {
   final int id;
   final String name;
   final String posterPath;
-  final DateTime firstAirDate;
+  final String firstAirDate;
   final double voteAverage;
 
   const TvTrending({
@@ -32,10 +32,10 @@ class TvTrending extends Equatable {
 extension TvTrendingDtoExtension on TvTrendingDto {
   TvTrending toEntity() {
     return TvTrending(
-      backdropPath: backdropPath ?? "5fKDsHMfY3K7vV1JFECYaafnwwx.jpg",
+      backdropPath: backdropPath ?? "/5fKDsHMfY3K7vV1JFECYaafnwwx.jpg",
       id: id,
       name: name,
-      posterPath: posterPath ?? "5fKDsHMfY3K7vV1JFECYaafnwwx.jpg",
+      posterPath: posterPath ?? "/5fKDsHMfY3K7vV1JFECYaafnwwx.jpg",
       firstAirDate: firstAirDate,
       voteAverage: voteAverage,
     );

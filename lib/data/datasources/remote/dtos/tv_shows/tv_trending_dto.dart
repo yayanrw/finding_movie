@@ -22,7 +22,7 @@ class TvTrendingDto {
   List<int> genreIds;
   double popularity;
   @JsonKey(name: "first_air_date")
-  DateTime firstAirDate;
+  String firstAirDate;
   @JsonKey(name: "vote_average")
   double voteAverage;
   @JsonKey(name: "vote_count")

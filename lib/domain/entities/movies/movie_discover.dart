@@ -5,7 +5,7 @@ class MovieDiscover extends Equatable {
   final String backdropPath;
   final int id;
   final String posterPath;
-  final DateTime releaseDate;
+  final String releaseDate;
   final String title;
   final double voteAverage;
 
@@ -32,9 +32,9 @@ class MovieDiscover extends Equatable {
 extension MovieDiscoverDtoExtension on MovieDiscoverDto {
   MovieDiscover toEntity() {
     return MovieDiscover(
-      backdropPath: backdropPath ?? "5fKDsHMfY3K7vV1JFECYaafnwwx.jpg",
+      backdropPath: backdropPath ?? "/5fKDsHMfY3K7vV1JFECYaafnwwx.jpg",
       id: id,
-      posterPath: posterPath ?? "5fKDsHMfY3K7vV1JFECYaafnwwx.jpg",
+      posterPath: posterPath ?? "/5fKDsHMfY3K7vV1JFECYaafnwwx.jpg",
       releaseDate: releaseDate,
       title: title,
       voteAverage: voteAverage,

@@ -42,11 +42,11 @@ class MovieDetail extends Equatable {
 extension MovieDetailResponseExtension on MovieDetailResponse {
   MovieDetail toEntity() {
     return MovieDetail(
-      backdropPath: backdropPath,
+      backdropPath: backdropPath ?? "/5fKDsHMfY3K7vV1JFECYaafnwwx.jpg",
       genres: genres.map((genreDto) => genreDto.toEntity()).toList(),
       id: id,
       overview: overview,
-      posterPath: posterPath,
+      posterPath: posterPath ?? "/5fKDsHMfY3K7vV1JFECYaafnwwx.jpg",
       releaseDate: releaseDate,
       runtime: runtime,
       title: title,

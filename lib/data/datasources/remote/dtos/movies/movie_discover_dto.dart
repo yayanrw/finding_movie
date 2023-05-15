@@ -19,7 +19,7 @@ class MovieDiscoverDto {
   @JsonKey(name: "poster_path")
   String? posterPath;
   @JsonKey(name: "release_date")
-  DateTime releaseDate;
+  String releaseDate;
   String title;
   bool video;
   @JsonKey(name: "vote_average")
