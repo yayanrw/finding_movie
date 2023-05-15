@@ -30,14 +30,14 @@ class IconTextWidget extends StatelessWidget {
         ),
         Text(
           value,
-          style: myTextTheme(color: MyColors.textGrey2).titleSmall,
+          style: myTextTheme(color: MyColors.textGrey2).labelMedium,
         ),
         const SizedBox(
           width: 4,
         ),
         Text(
           endText,
-          style: myTextTheme(color: MyColors.textGrey2).titleSmall,
+          style: myTextTheme(color: MyColors.textGrey2).labelMedium,
         ),
         const SizedBox(
           width: 20,
