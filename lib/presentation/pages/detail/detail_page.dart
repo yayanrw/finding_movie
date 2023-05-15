@@ -1,5 +1,7 @@
 import 'package:auto_route/annotations.dart';
 import 'package:auto_route/auto_route.dart';
+import 'package:finding_movie/core/config/constants.dart';
+import 'package:finding_movie/core/router/router.dart';
 import 'package:finding_movie/core/theme/my_colors.dart';
 import 'package:finding_movie/core/theme/my_text_theme.dart';
 import 'package:finding_movie/core/utils/request_state.dart';
@@ -8,6 +10,7 @@ import 'package:finding_movie/generated/l10n.dart';
 import 'package:finding_movie/presentation/pages/detail/detail_notifier.dart';
 import 'package:finding_movie/presentation/widgets/detail/header_widget.dart';
 import 'package:finding_movie/presentation/widgets/detail/icon_text_widget.dart';
+import 'package:finding_movie/presentation/widgets/detail/image_card_widget.dart';
 import 'package:finding_movie/presentation/widgets/home/badge_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
@@ -70,6 +73,35 @@ class _DetailPageState extends State<DetailPage> {
                           S.of(context).relatedMovies,
                           style: myTextTheme().titleMedium,
                         ),
+                        const SizedBox(height: 12),
+                        if (data.requestStateSimilar == RequestState.loading)
+                          const Center(child: CircularProgressIndicator())
+                        else if (data.requestStateSimilar ==
+                            RequestState.loaded)
+                          SingleChildScrollView(
+                            child: SizedBox(
+                              height: 114,
+                              child: ListView.builder(
+                                scrollDirection: Axis.horizontal,
+                                shrinkWrap: true,
+                                itemCount: data.similar.length,
+                                itemBuilder: (BuildContext context, int index) {
+                                  final similar = data.similar[index];
+                                  return ImageCardWidget(
+                                      onTap: () {
+                                        context.router.push(DetailRoute(item: similar));
+                                      },
+                                      imgUrl:
+                                          "$imageDir${similar.backdropPath}");
+                                },
+                              ),
+                            ),
+                          )
+                        else
+                          Center(
+                            key: const Key('error_message'),
+                            child: Text(data.messageDetail),
+                          )
                       ],
                     ),
                   ),
@@ -94,6 +126,7 @@ class _DetailPageState extends State<DetailPage> {
       final detailNotifier =
           Provider.of<DetailNotifier>(context, listen: false);
       detailNotifier.fetchDetail(widget.item.id, widget.item);
+      detailNotifier.fetchSimilar(widget.item.id, widget.item);
     });
   }
 
