@@ -73,14 +73,14 @@ class _DetailPageState extends State<DetailPage> {
                           S.of(context).relatedMovies,
                           style: myTextTheme().titleMedium,
                         ),
-                        const SizedBox(height: 12),
+                        const SizedBox(height: 17),
                         if (data.requestStateSimilar == RequestState.loading)
                           const Center(child: CircularProgressIndicator())
                         else if (data.requestStateSimilar ==
                             RequestState.loaded)
                           SingleChildScrollView(
                             child: SizedBox(
-                              height: 114,
+                              height: 170,
                               child: ListView.builder(
                                 scrollDirection: Axis.horizontal,
                                 shrinkWrap: true,
@@ -88,11 +88,15 @@ class _DetailPageState extends State<DetailPage> {
                                 itemBuilder: (BuildContext context, int index) {
                                   final similar = data.similar[index];
                                   return ImageCardWidget(
-                                      onTap: () {
-                                        context.router.push(DetailRoute(item: similar));
-                                      },
-                                      imgUrl:
-                                          "$imageDir${similar.backdropPath}");
+                                    onTap: () {
+                                      context.router
+                                          .push(DetailRoute(item: similar));
+                                    },
+                                    imgUrl: "$imageDir${similar.backdropPath}",
+                                    title: data.detail is MovieDetail
+                                        ? "${similar.title} ${extractYear(similar.releaseDate)}"
+                                        : "${similar.name} ${extractYear(similar.firstAirDate)}",
+                                  );
                                 },
                               ),
                             ),
@@ -214,7 +218,7 @@ class _DetailPageState extends State<DetailPage> {
                       ? detail.releaseDate
                       : detail.firstAirDate)
                   .toString(),
-              style: myTextTheme(color: MyColors.textGrey).titleMedium,
+              style: myTextTheme(color: MyColors.textGrey).labelMedium,
             ),
           ],
         ),
@@ -233,7 +237,7 @@ class _DetailPageState extends State<DetailPage> {
               height: 8,
             ),
             SizedBox(
-              height: 34,
+              height: 26,
               child: ListView.builder(
                 shrinkWrap: true,
                 scrollDirection: Axis.horizontal,
@@ -246,19 +250,16 @@ class _DetailPageState extends State<DetailPage> {
                       padding: EdgeInsets.only(
                           right: index != detail.genres.length - 1 ? 8.0 : 0),
                       child: BadgeWidget(
-                        height: 34,
+                        height: 26,
                         width: 90,
                         widget: SizedBox(
                           width: double.infinity,
                           child: Center(
-                            child: Padding(
-                              padding: const EdgeInsets.only(bottom: 8),
-                              child: Text(
-                                genre.name,
-                                style: myTextTheme(color: MyColors.textGrey)
-                                    .titleMedium,
-                                textAlign: TextAlign.center,
-                              ),
+                            child: Text(
+                              genre.name,
+                              style: myTextTheme(color: MyColors.textGrey)
+                                  .labelMedium,
+                              textAlign: TextAlign.center,
                             ),
                           ),
                         ),
@@ -272,5 +273,12 @@ class _DetailPageState extends State<DetailPage> {
         ),
       ],
     );
+  }
+
+  String extractYear(String input) {
+    if (input != "") {
+      return "(${DateTime.parse(input).year.toString()})";
+    }
+    return "";
   }
 }
