@@ -1,5 +1,7 @@
 import 'package:auto_route/annotations.dart';
+import 'package:auto_route/auto_route.dart';
 import 'package:finding_movie/core/config/constants.dart';
+import 'package:finding_movie/core/router/router.dart';
 import 'package:finding_movie/core/theme/my_colors.dart';
 import 'package:finding_movie/core/theme/my_text_theme.dart';
 import 'package:finding_movie/core/utils/request_state.dart';
@@ -95,6 +97,9 @@ class _HomePageState extends State<HomePage> {
                   imgUrl: '$imageDir${item.backdropPath}',
                   title: item is MovieTrending ? item.title : item.name,
                   rating: item.voteAverage,
+                  onTap: () {
+                    context.router.push(DetailRoute(item: item));
+                  },
                 );
               }).toList();
 
